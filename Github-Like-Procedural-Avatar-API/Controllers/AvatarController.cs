@@ -16,11 +16,13 @@ namespace Github_Like_Procedural_Avatar_API.Controllers
     public class AvatarController : ControllerBase
     {
         [HttpGet("get")]
-        public IActionResult Get(int width = 100, int height = 100) // we will use 100 px as a default value
+        public IActionResult Get(string hexadecimalColor, int width = 100, int height = 100)
         {
             Startup.Generator.SetDimensions(width, height); // set the resolution needed
 
             Startup.Generator.Generate(); // generate
+
+            Startup.Generator.SetColor(hexadecimalColor); // setting the hexadecimal color
 
             Stream stream = new MemoryStream(); // here we are storing the stream where we will save the bitmap
 
