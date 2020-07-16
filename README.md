@@ -10,13 +10,13 @@ In simple terms, this API generates avatar images at runtime without saving them
 # How to use?  
 
 You have to access the following link in order to generate an image: ~/api/avatar/get , where ~ is the server address
-For another generation you have to reload the page.  
+For another generation you have to send another GET request(by reloading the page for example). 
 You can give it different resolution for the image by assinging values to the width and height parameters in the link address 
 (for example: If we want to get an image with the resolution 1000x1000px then we will use the following link ~/api/avatar/get?width=1000&height=1000)
 
 # Features
 - width and height can be set by using the following url parameters: ~?width=1000&height=1000 ,where ~ is the page url address.
-- preferred color, you can choose a preferred color by using the following url parameter: ~?hexadecimalColor=%23ffffff ,where %23 is used insted of using #
+- preferred color, you can choose a preferred color by using the following url parameter: ~?hexadecimalColor=%23ffffff ,where %23 is used instead of using #
 
 # Constraints
 - The width and height values should be between 10 and 10000 px. 
