@@ -14,8 +14,14 @@ For another generation you have to reload the page.
 You can give it different resolution for the image by assinging values to the width and height parameters in the link address 
 (for example: If we want to get an image with the resolution 1000x1000px then we will use the following link ~/api/avatar/get?width=1000&height=1000)
 
+# Features
+- width and height can be set by using the following url parameters: ~?width=1000&height=1000 ,where ~ is the page url address.
+- preferred color, you can choose a preferred color by using the following url parameter: ~?hexadecimalColor=%23ffffff ,where %23 is used insted of using #
+
 # Constraints
 - The width and height values should be between 10 and 10000 px. 
+- The preferred color has to be in hexadecimal format (#ffffff for example) and we have to use %23 instead of # when we introduce it as an url parameter.
+Keep in mind that if you pass this parameter by some app (Postman for example) then you do not need to use %23 instead of #.
 
 # In the end
 This repo is still under development so let me know if you encounter any problems or if you have a more efficient approach. 
